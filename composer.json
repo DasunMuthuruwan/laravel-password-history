@@ -33,8 +33,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../password-history"
+            "type": "vcs",
+            "url": "https://github.com/DasunMuthuruwan/laravel-password-history"
         }
     ],
     "extra": {

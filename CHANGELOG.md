@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable history limit via `config/password-history.php` (`PASSWORD_HISTORY_LIMIT` env var), default `5`.
 - Publishable migration, config, and language files.
 - `password-history:prune` console command for scheduled cleanup of history beyond the configured limit.
-- Laravel 13 support (`illuminate/*: ^13.0`), PHP `^8.3`.
+- Laravel 12 support (`illuminate/*: ^12.0`), PHP `^8.2`.
 
 [Unreleased]: https://github.com/DasunMuthuruwan/laravel-password-history/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/DasunMuthuruwan/laravel-password-history/releases/tag/v1.0.0

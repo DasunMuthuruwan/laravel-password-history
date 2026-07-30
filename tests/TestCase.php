@@ -3,7 +3,7 @@
 namespace DevDasun\PasswordHistory\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use YourVendor\PasswordHistory\PasswordHistoryServiceProvider;
+use DevDasun\PasswordHistory\PasswordHistoryServiceProvider;
 
 abstract class TestCase extends BaseTestCase
 {

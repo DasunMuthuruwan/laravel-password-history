@@ -1,6 +1,6 @@
 <?php
 
-namespace YourVendor\PasswordHistory\Rules;
+namespace DevDasun\PasswordHistory\Rules;
 
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;

@@ -4,7 +4,7 @@ namespace DevDasun\PasswordHistory\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Hash;
-use YourVendor\PasswordHistory\Models\PasswordHistory;
+use DevDasun\PasswordHistory\Models\PasswordHistory;
 
 trait HasPasswordHistory
 {

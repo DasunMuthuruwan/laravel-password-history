@@ -27,10 +27,8 @@ trait HasPasswordHistory
     {
         $this->passwordHistories()->create(['password' => $hashedPassword]);
 
-        $limit = config('password-history.limit', 5);
-
         $this->passwordHistories()
-            ->skip($limit)
+            ->skip(config('password-history.limit', 5))
             ->take(PHP_INT_MAX)
             ->pluck('id')
             ->each(fn ($id) => PasswordHistory::destroy($id));
@@ -43,10 +41,8 @@ trait HasPasswordHistory
      */
     public function passwordWasUsedBefore(string $plainPassword): bool
     {
-        $limit = config('password-history.limit', 5);
-
         return $this->passwordHistories()
-            ->take($limit)
+            ->take(config('password-history.limit', 5))
             ->get()
             ->contains(fn (PasswordHistory $history) => Hash::check($plainPassword, $history->password));
     }

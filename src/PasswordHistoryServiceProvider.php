@@ -17,8 +17,7 @@ class PasswordHistoryServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if ($this->app->runningInConsole()) {
-            $this->loadTranslationsFrom(__DIR__ . '/../lang', 'password-history');
-
+           
             $this->publishes([
                 __DIR__ . '/../config/password-history.php' => config_path('password-history.php'),
             ], 'password-history-config');
@@ -34,6 +33,8 @@ class PasswordHistoryServiceProvider extends ServiceProvider
                 \DevDasun\PasswordHistory\Console\Commands\PrunePasswordHistory::class,
             ]);
         }
+
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'password-history');
 
         $publishedMigration = glob(database_path('migrations/*_create_password_history_table.php'));
         if (empty($publishedMigration)) {

@@ -31,6 +31,12 @@
             "DevDasun\\PasswordHistory\\Tests\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../password-history"
+        }
+    ],
     "extra": {
         "laravel": {
             "providers": [

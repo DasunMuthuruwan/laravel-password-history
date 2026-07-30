@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('password_histories', function (Blueprint $table) {
+        Schema::create(config('password-history.table'), function (Blueprint $table) {
             $table->id();
             $table->morphs('historyable'); // supports User or any authenticatable
             $table->string('password');
@@ -18,6 +18,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('password_histories');
+        Schema::dropIfExists(config('password-history.table'));
     }
 };

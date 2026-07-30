@@ -30,5 +30,11 @@ class PasswordHistoryServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../lang' => $this->app->langPath('vendor/password-history'),
         ], 'password-history-lang');
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \DevDasun\PasswordHistory\Console\Commands\PrunePasswordHistory::class,
+            ]);
+        }
     }
 }

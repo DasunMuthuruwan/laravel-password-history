@@ -1,5 +1,5 @@
 {
-    "name": "devdasung/password-history",
+    "name": "devdasun/password-history",
     "description": "Prevent users from reusing recent passwords in Laravel",
     "homepage": "https://github.com/DasunMuthuruwan/laravel-password-history",
     "license": "MIT",

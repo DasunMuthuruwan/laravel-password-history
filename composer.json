@@ -1,0 +1,43 @@
+{
+    "name": "devdasung/password-history",
+    "description": "Prevent users from reusing recent passwords in Laravel",
+    "homepage": "https://github.com/DasunMuthuruwan/laravel-password-history",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dasun Kalupahana",
+            "email": "dasunmuthuruwan9@live.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^13.0",
+        "illuminate/database": "^13.0",
+        "illuminate/hashing": "^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevDasun\\PasswordHistory\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DevDasun\\PasswordHistory\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevDasun\\PasswordHistory\\PasswordHistoryServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
